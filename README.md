@@ -1,4 +1,4 @@
-![](images/img.jpg)
+<img src="images/img.jpg">
 
 # DirectivesExample
 
