@@ -1,0 +1,18 @@
+<div>
+    <div>
+        <input type="checkbox" [checked]="classList.indexOf('burlywood')>-1" (click)="changeCssClass('burlywood')">Burlywood
+    </div>
+
+    <div>
+        <input type="checkbox" [checked]="classList.indexOf('border')>-1" (click)="changeCssClass('border')">Round
+    </div>
+</div>
+
+
+<div class="container" [ngClass]="['burlywood', 'border']">
+    This will always have a burlywood and border class
+</div>
+<hr>
+<div class="container" [ngClass]="classList">
+    This is {{classList.indexOf('burlywood')>-1 ? "" : "NOT"}} a burlywood and {{classList.indexOf('border')>-1 ? "" : "NOT"}} border class
+</div>

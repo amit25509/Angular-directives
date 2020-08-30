@@ -1,0 +1,26 @@
+<div [ngStyle]="{'color': 'red', 'background-color':'cyan'}">
+    Uses Fixed red text and cyan background
+</div>
+<hr>
+<span [ngStyle]="{'color': mycolor, border:myborder}" [style.font-size.px]="myfontsize" [style.border-radius.px]="borderRadius"> 
+        {{mycolor}} text with {{myfontsize}} font size with {{myborder}} border
+                and radius of {{borderRadius}}
+</span>
+
+<div>
+    <input type="text" name="mycolor" value="{{mycolor}}" #colorInput>Color
+</div>
+
+<div>
+    <input type="number" name="myfontsize" value="{{myfontsize}}" #fontInput> Font Size
+</div>
+
+<div>
+    <input type="text" name="myborder" value=" {{myborder}}" #borderInput> Border color
+</div>
+
+<div>
+    <input type="number" name="borderRadius" value="{{borderRadius}}" #borderInput> Border radius
+</div>
+
+<button (click)="customizeCss(colorInput.value, fontInput.value, borderInput.value, borderInput.value)">Apply Styles</button>
